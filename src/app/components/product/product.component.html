@@ -1,0 +1,27 @@
+<!-- <div *ngIf="dataLoaded==false" class="spinner-border text-info" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div> -->
+  <div *ngIf="dataLoaded==false" class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<table *ngIf="dataLoaded==true" class="table"  >
+    <thead>
+      <tr >
+        <th *ngIf="dataLoaded==true" class="text-success">Id</th>
+        <th>Ürün Adı</th>
+        <th>Categori Id</th>
+        <th>Birim Fiyatı</th>
+        <th>Birim Stoku</th>
+        </tr>
+    </thead>
+    <tr  *ngFor="let product of products">
+        <td class="text-success">{{product.productID}}</td>
+        <td class="text-primary">{{product.productName}}</td>
+        <td class="text-danger">{{product.categoryID}}</td>
+        <td class="text-warning bg-dark">{{product.unitPrice}}</td>
+        <td class="text-info bg-dark">{{product.unitsInStock}}</td>
+        </tr>
+    </table>
+   
+
+ 
